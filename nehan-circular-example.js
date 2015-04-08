@@ -5,7 +5,7 @@ Nehan.setStyles({
     measure:"280px",
     extent:"280px",
     "box-sizing":"cotent-box",
-    "border-radius":"250px",
+    "border-radius":"280px",
     margin:{after:"2em"},
     content:function(ctx){
       // set default content if markup is empty.
@@ -27,13 +27,11 @@ Nehan.setStyles({
     "line-height":"1em",
     "padding":{start:"0.5em"},
     color:function(ctx){
-      var parent_style = ctx.getParentStyleContext();
       var child_index = ctx.getChildIndex();
       var cur_hour = new Date().getHours() % 12;
       return (child_index + 1 === cur_hour)? "red" : "black";
     },
     onblock:function(ctx){
-      var parent_style = ctx.box.style.parent;
       var is_vert = ctx.isTextVertical();
       var child_index = ctx.getChildIndex();
       var child_count = ctx.getParentStyleContext().getChildCount();
