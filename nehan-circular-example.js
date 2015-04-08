@@ -13,7 +13,7 @@ Nehan.setStyles({
 	return ret + "<div>" + (index + 1) + "時ですよ！</div>";
       }) : "";
     },
-    // set page-break if enough space is left.
+    // set page-break if enough space is not left.
     onload:function(ctx){
       var items = [];
       var rest_extent = ctx.getRestExtent();
