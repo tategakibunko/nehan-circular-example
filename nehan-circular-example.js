@@ -28,8 +28,9 @@ Nehan.setStyles({
     "padding":{start:"0.5em"},
     color:function(ctx){
       var child_index = ctx.getChildIndex();
+      var child_hour = (child_index + 1) % 12;
       var cur_hour = new Date().getHours() % 12;
-      return (child_index + 1 === cur_hour)? "red" : "black";
+      return (child_hour === cur_hour)? "red" : "black";
     },
     onblock:function(ctx){
       var is_vert = ctx.isTextVertical();
